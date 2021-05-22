@@ -1,3 +1,26 @@
+import { Invoice } from "./module/Invoice.js";
+
+let oneClient = new Invoice ("masha", 400, 'for web');
+let tewClient = new Invoice ("nastja", 500, "for JS");
+
+//console.log(oneClient, tewClient);
+
+oneClient.client = "Marya";
+
+//console.log(oneClient, tewClient);
+
+let invoices: Invoice[] = [];
+invoices.push(oneClient);
+invoices.push(tewClient);
+
+console.log(invoices);
+
+invoices.forEach(el =>{
+    console.log( el.client, el.amount, el.format());
+})
+
+
+
 // DOM Elements
 
 const list = document.querySelector(".item-list") as HTMLUListElement;
@@ -19,3 +42,6 @@ form.addEventListener("submit", e =>{
         amount.valueAsNumber
     )
 })
+
+
+
