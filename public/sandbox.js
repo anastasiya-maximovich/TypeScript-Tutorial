@@ -1,12 +1,13 @@
-var inputs = document.querySelectorAll("input");
+"use strict";
+const inputs = document.querySelectorAll("input");
 console.log(inputs);
-inputs.forEach(function (input) {
+inputs.forEach(input => {
     console.log(input);
 });
-var character = "masha";
-var age = 30;
-var isBlackBelt = false;
-var calc = function (num) {
+let character = "masha";
+let age = 30;
+let isBlackBelt = false;
+const calc = (num) => {
     return num * Math.PI;
 };
 console.log(calc(6));
@@ -14,10 +15,10 @@ function writter(str) {
     console.log(str.split(''));
 }
 writter("5678");
-var nastja = {
+let nastja = {
     name: "Asja",
     age: 40,
-    bcb: true
+    bcb: true,
 };
 console.log(nastja);
 nastja.age = 45;
